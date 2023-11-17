@@ -1,7 +1,7 @@
-import React from 'react'
+import React , { useRef }from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import n1 from '../Assets/n1.jpg'
-import { Container } from 'react-bootstrap';
+import { Container, Nav } from 'react-bootstrap';
 import n2 from '../Assets/n2.jpg';
 import n3 from '../Assets/n3.jpg';
 import n4 from '../Assets/n4.jpg';
@@ -24,6 +24,17 @@ import n16 from '../Assets/n16.jpg';
 
 
 export default function NavBar2() {
+
+  const scrollContainerRef = useRef(null);
+
+  const scrollImages = (direction) => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const scrollAmount = 200; // Adjust the scroll amount as needed
+      container.scrollLeft += direction * scrollAmount;
+    }
+  };
+
 
   const responsive = {
     superLargeDesktop: {
@@ -49,44 +60,47 @@ export default function NavBar2() {
   return (
     <Container className='BarSize mw-100 ' >
 
-    <OverflowScrolling className='overflow-scrolling  '>
-    <div> <img src={n1} className='Navbar2Img' alt='' /> <p className='fontSize'>Iconic city</p></div>
-     <div> <img src={n2} className='Navbar2Img ' alt='' /><p className='fontSize'>Iconic city</p> </div>
-     <div><img src={n3} className='Navbar2Img ' alt='' /><p className='fontSize'>Iconic city</p> </div> 
-     <div> <img src={n4} className='Navbar2Img ' alt='' /><p className='fontSize'>Iconic city</p> </div>
-     <div> <img src={n5} className='Navbar2Img ' alt='' /><p className='fontSize'>Iconic city</p> </div>
-     <div> <img src={n6} className='Navbar2Img ' alt='' /><p className='fontSize'>Iconic city</p> </div>
-     <div><img src={n7} className='Navbar2Img ' alt='' /><p className='fontSize'>Iconic city</p> </div> 
-     <div> <img src={n8} className='Navbar2Img ' alt='' /><p className='fontSize'>Iconic city</p> </div>
-     <div> <img src={n9} className='Navbar2Img ' alt='' /><p className='fontSize'>Iconic city</p> </div>
-     <div> <img src={n10} className='Navbar2Img ' alt='' /><p className='fontSize'>Iconic city</p> </div>
-     <div> <img src={n11} className='Navbar2Img ' alt='' /><p className='fontSize'>Iconic city</p> </div>
-     <div> <img src={n12} className='Navbar2Img ' alt='' /><p className='fontSize'>Iconic city</p> </div>
-     <div> <img src={n13} className='Navbar2Img ' alt='' /><p className='fontSize'>Iconic city</p> </div>
-     <div> <img src={n14} className='Navbar2Img ' alt='' /><p className='fontSize'>Iconic city</p> </div>
-     <div> <img src={n15} className='Navbar2Img ' alt='' /> <p className='fontSize'>Iconic city</p></div>
-     <div> <img src={n16} className='Navbar2Img ' alt='' /><p className='fontSize'>Iconic city</p> </div>
-    
+        <button className="scroll-buttons" onClick={() => scrollImages(-1)}> <i class="fa-solid fa-arrow-left"></i></button>
 
-    </OverflowScrolling>
+        <OverflowScrolling className='overflow-scrolling ' >
 
-   
+        <div className='navImg '> <Nav.Link href="./"><img src={n2} className=' ' alt='' /><p className='fontSize'>Trending</p></Nav.Link> </div>
+        <div className='navImg '> <Nav.Link href="./Rooms"><img src={n1} className='' alt='' /> <p className='fontSize'>Rooms</p> </Nav.Link></div>
+        <div className='navImg '><Nav.Link href=""><img src={n3} className=' ' alt='' /><p className='fontSize'>Omg</p></Nav.Link> </div>
+        <div className='navImg '> <img src={n4} className=' ' alt='' /><p className='fontSize'>Iconic&nbsp;city</p> </div>
+        <div className='navImg '> <img src={n5} className=' ' alt='' /><p className='fontSize'>Amazing&nbsp;View</p> </div>
+        <div className='navImg '> <img src={n6} className=' ' alt='' /><p className='fontSize'>CoutrySide</p> </div>
+        <div className='navImg '><img src={n7} className=' ' alt='' /><p className='fontSize'>National&nbsp;park</p> </div>
+        <div className='navImg '> <img src={n8} className=' ' alt='' /><p className='fontSize'>Camping</p> </div>
+        <div className='navImg '> <img src={n9} className=' ' alt='' /><p className='fontSize'>Islands</p> </div>
+        <div className='navImg '> <img src={n10} className=' ' alt='' /><p className='fontSize'>Design</p> </div>
+        <div className='navImg '> <img src={n11} className=' ' alt='' /><p className='fontSize'>World&nbsp;Top</p> </div>
+        <div className='navImg '> <img src={n12} className=' ' alt='' /><p className='fontSize'>Beach</p> </div>
+        <div className='navImg '> <img src={n13} className=' ' alt='' /><p className='fontSize'>Castles</p> </div>
+        <div className='navImg '> <img src={n14} className=' ' alt='' /><p className='fontSize'>New</p> </div>
+        <div className='navImg '> <img src={n15} className=' ' alt='' /> <p className='fontSize'>Lake</p></div>
+        <div className='navImg '> <img src={n16} className=' ' alt='' /><p className='fontSize'>Amazing&nbsp;Pool</p> </div>
+        
 
-<div className='filter m-5'>
+      </OverflowScrolling>
 
-<button className='f1 '>Filters <i class="fa-solid fa-filter fa-xl"></i></button>
+      <button className="scroll-buttons" onClick={() => scrollImages(1)}> <i class="fa-solid fa-arrow-right"></i></button>
+  
+      <div className='filter m-5'>
 
-<button className='f2 '>Display&nbsp;total&nbsp;before&nbsp;taxes&nbsp;<i class="fa-solid fa-toggle-on fa-xl"></i></button>
-</div>
+        <button className='f1 '>Filters <i class="fa-solid fa-filter fa-xl"></i></button>
+
+        <button className='f2 '>Display&nbsp;total&nbsp;before&nbsp;taxes&nbsp;<i class="fa-solid fa-toggle-on fa-xl"></i></button>
+      </div>
 
 
     </Container>
-  
-    
-    
-     
 
- 
+
+
+
+
+
 
   )
 }
