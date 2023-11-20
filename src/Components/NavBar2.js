@@ -58,7 +58,7 @@ export default function NavBar2() {
 
 
   return (
-    <Container className='BarSize mw-100 ' >
+    <Container  responsive={responsive} className='BarSize mw-100 ' >
 
         <button className="scroll-buttons" onClick={() => scrollImages(-1)}> <i class="fa-solid fa-arrow-left"></i></button>
 
@@ -66,8 +66,8 @@ export default function NavBar2() {
 
         <div className='navImg '> <Nav.Link href="./"><img src={n2} className=' ' alt='' /><p className='fontSize'>Trending</p></Nav.Link> </div>
         <div className='navImg '> <Nav.Link href="./Rooms"><img src={n1} className='' alt='' /> <p className='fontSize'>Rooms</p> </Nav.Link></div>
-        <div className='navImg '><Nav.Link href=""><img src={n3} className=' ' alt='' /><p className='fontSize'>Omg</p></Nav.Link> </div>
-        <div className='navImg '> <img src={n4} className=' ' alt='' /><p className='fontSize'>Iconic&nbsp;city</p> </div>
+        <div className='navImg '><Nav.Link href="./Omg1"><img src={n3} className=' ' alt='' /><p className='fontSize'>Omg</p></Nav.Link> </div>
+        <div className='navImg '> <Nav.Link href=""><img src={n4} className=' ' alt='' /><p className='fontSize'>Iconic&nbsp;city</p> </Nav.Link></div>
         <div className='navImg '> <img src={n5} className=' ' alt='' /><p className='fontSize'>Amazing&nbsp;View</p> </div>
         <div className='navImg '> <img src={n6} className=' ' alt='' /><p className='fontSize'>CoutrySide</p> </div>
         <div className='navImg '><img src={n7} className=' ' alt='' /><p className='fontSize'>National&nbsp;park</p> </div>

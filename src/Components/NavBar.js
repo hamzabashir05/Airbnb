@@ -21,7 +21,7 @@ export default function NavBar() {
       <input class="form-control mr-sm-2" type="search" placeholder="Add Guests" aria-label="Search"/>
          </Nav.Link>
          </Nav>
-         <Nav className='navRightBtns m-2 me-auto'> 
+         <Nav className=' m-2 me-auto'> 
          <Nav.Link href="#signin"className='m-2' >Airbnb&nbsp;your&nbsp;home</Nav.Link>
          <Nav.Link  href="#globe" className='m-2'><i class="fa-solid fa-globe fa-xl"></i></Nav.Link>
          <Nav.Link  href="#user"> <button className='button-container'>

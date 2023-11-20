@@ -10,6 +10,8 @@ import NavBar from './Components/NavBar';
 import NavBar2 from './Components/NavBar2';
 import Destinations from './Components/Destinations';
 
+import Omg1 from './Components/Omg1';
+
 
 function App() {
   return (
@@ -37,6 +39,7 @@ function App() {
   <Route path='/' element={ <Destinations/>} />
   <Route path='Trending' element={<Destinations/>}/>
   <Route path='Rooms' element={<Rooms/>}/>
+  <Route path='Omg1' element={<Omg1/>}/>
     </Routes>
     </BrowserRouter>
   </Col>

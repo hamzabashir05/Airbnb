@@ -44,7 +44,7 @@ export default function Destinations() {
 
 
   return (
-    <Container responsive={responsive} className='mw-100 m-1' >
+    <Container responsive={responsive} className='mw-100' >
 <div className='destiDisplay'> 
 <div className='destImg' > 
   <Carousel>
@@ -56,8 +56,8 @@ export default function Destinations() {
   </Carousel.Item>
   </Carousel>
   <div className='textStyle'>
-  <h6>Tulbagh,South Africa</h6> 
-  <p>viewed 14177 Times <br/>Mar 31 - Apr 25 <br/>$ 146 night</p></div>
+  <h6>Dubai,uae</h6> 
+  <p>1957km Away <br/>Dec 6-11 <br/>$ 218 night</p></div>
   </div>
   
   <div className='destImg' > 
@@ -71,8 +71,8 @@ export default function Destinations() {
   </Carousel>
  
   <div className='textStyle'>
-  <h6>Tulbagh,South Africa</h6> 
-  <p>viewed 14177 Times <br/>Mar 31 - Apr 25 <br/>$ 146 night</p></div>
+  <h6>Rome,italy</h6> 
+  <p>5200km Away <br/>Nov 26-30<br/>$ 146 night</p></div>
   </div>
 
   <div className='destImg'> 
@@ -85,8 +85,8 @@ export default function Destinations() {
     </Carousel.Item>
   </Carousel>
   <div className='textStyle'>
-  <h6>Tulbagh,South Africa</h6> 
-  <p>viewed 14177 Times <br/>Mar 31 - Apr 25 <br/>$ 146 night</p></div>
+  <h6>Dubai,uae</h6> 
+  <p>1957km Away <br/>Dec 2-7 <br/>$ 146 night</p></div>
   </div>
   <div className='destImg'> 
   <Carousel>
@@ -98,8 +98,8 @@ export default function Destinations() {
     </Carousel.Item>
   </Carousel>
   <div className='textStyle'>
-  <h6>Tulbagh,South Africa</h6> 
-  <p>viewed 14177 Times <br/>Mar 31 - Apr 25 <br/>$ 146 night</p></div>
+  <h6>Dublin,Ireland</h6> 
+  <p>6212km Away<br/>Nov 27-31<br/>$ 17,614 night</p></div>
   </div>
   <div className='destImg'> 
   <Carousel>
@@ -124,8 +124,8 @@ export default function Destinations() {
     </Carousel.Item>
   </Carousel>
   <div className='textStyle'>
-  <h6>Tulbagh,South Africa</h6> 
-  <p>viewed 14177 Times <br/>Mar 31 - Apr 25 <br/>$ 146 night</p></div>
+  <h6>Paris,France</h6> 
+  <p>5200km Away <br/>Mar 31 - Apr 25 <br/>$ 1146 night</p></div>
   </div>
   <div className='destImg'> 
   <Carousel>
@@ -137,8 +137,8 @@ export default function Destinations() {
     </Carousel.Item>
   </Carousel>
   <div className='textStyle'>
-  <h6>Tulbagh,South Africa</h6> 
-  <p>viewed 14177 Times <br/>Mar 31 - Apr 25 <br/>$ 146 night</p></div>
+  <h6>Capetown,South Africa</h6> 
+  <p>9400km Away <br/>Mar 31 - Apr 1 <br/>$ 2146 night</p></div>
   </div>
   <div className='destImg'> 
   <Carousel>
@@ -150,8 +150,8 @@ export default function Destinations() {
     </Carousel.Item>
   </Carousel>
   <div className='textStyle'>
-  <h6>Tulbagh,South Africa</h6> 
-  <p>viewed 14177 Times <br/>Mar 31 - Apr 25 <br/>$ 146 night</p></div>
+  <h6>Consolacao,Brazil</h6> 
+  <p>14,104km Away <br/>Mar 27 - Apr 5 <br/>$ 46 night</p></div>
   </div>
   
   </div>
