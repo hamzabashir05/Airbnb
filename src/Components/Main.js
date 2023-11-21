@@ -1,20 +1,30 @@
 import React from 'react'
-import NavBar from './NavBar';
-import { Container } from 'react-bootstrap';
 import "./MainStyle.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar2 from './NavBar2';
-import Destinations from './Destinations';
-import MainText from './MainText';
 
+const ShowMapButton = ({ onClick }) => (
+  <button className="show-map-button" onClick={onClick}>
+    Show Map <i class="fa-solid fa-map"></i>
+  </button>
+);
  export default function Main() {
 
+  const handleShowMap = () => {
+    // Handle the logic to display the map
+    console.log('Show Map clicked');
+  };
 
+
+
+  
   return (
-   <Container className='m-2  mw-100 '> 
+  
 
+    <div className="home-page">
+    
+      <ShowMapButton onClick={handleShowMap} />
 
- 
-  </Container>
+    </div>
+  
   )
 }

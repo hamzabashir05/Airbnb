@@ -94,6 +94,7 @@ const destinationsData = [
 
 export default function Omg1() {
 
+  
 
     const responsive = {
         superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 4 },
@@ -103,7 +104,7 @@ export default function Omg1() {
       };
     
   return (
-    <Container responsive={responsive} fluid className='px-0 position-relative' >
+    <Container responsive={responsive} fluid className=' position-relative' >
 
       <div className='destiDisplay'>
         {destinationsData.map((destination) => (

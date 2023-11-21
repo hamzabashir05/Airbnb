@@ -44,7 +44,9 @@ export default function Destinations() {
 
 
   return (
+
     <Container responsive={responsive} className='mw-100' >
+      
 <div className='destiDisplay'> 
 <div className='destImg' > 
   <Carousel>

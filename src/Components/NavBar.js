@@ -12,13 +12,13 @@ export default function NavBar() {
       <Navbar.Brand href="#home">
       <img src={logo} className='w-25' alt=''/> 
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav " className='bg-light' />
+      <Navbar.Toggle aria-controls="responsive-navbar-nav "  />
       <Navbar.Collapse id="responsive-navbar-nav" className='NavBarStyling'> 
       <Nav className='m-2 me-auto mw-100 NavbarMid'>
            <Nav.Link href="./hotels" >Any&nbsp;Where&nbsp;&nbsp;|</Nav.Link>
            <Nav.Link href="./events">Any&nbsp;Week&nbsp;&nbsp;|</Nav.Link>
-          <Nav.Link className="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Add Guests" aria-label="Search"/>
+          <Nav.Link >
+      <input class=" form-control " type="search" placeholder="Add Guests" aria-label="Search"/>
          </Nav.Link>
          </Nav>
          <Nav className=' m-2 me-auto'> 

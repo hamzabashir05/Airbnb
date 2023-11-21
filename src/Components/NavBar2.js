@@ -1,5 +1,4 @@
-import React , { useRef }from 'react'
-import Carousel from 'react-bootstrap/Carousel';
+import React , { useState, useRef }from 'react'
 import n1 from '../Assets/n1.jpg'
 import { Container, Nav } from 'react-bootstrap';
 import n2 from '../Assets/n2.jpg';
@@ -34,8 +33,11 @@ export default function NavBar2() {
       container.scrollLeft += direction * scrollAmount;
     }
   };
+  const [isOn, setIsOn] = useState(false);
 
-
+  const handleToggle = () => {
+    setIsOn(!isOn);
+  }
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -53,6 +55,7 @@ export default function NavBar2() {
       breakpoint: { max: 800, min: 0 },
       items: 1
     }
+    
   };
 
 
@@ -60,16 +63,16 @@ export default function NavBar2() {
   return (
     <Container  responsive={responsive} className='BarSize mw-100 ' >
 
-        <button className="scroll-buttons" onClick={() => scrollImages(-1)}> <i class="fa-solid fa-arrow-left"></i></button>
+        <button className="scroll-buttons m-3" onClick={() => scrollImages(-1)}> <i class="fa-solid fa-arrow-left"></i></button>
 
         <OverflowScrolling className='overflow-scrolling ' >
 
-        <div className='navImg '> <Nav.Link href="./"><img src={n2} className=' ' alt='' /><p className='fontSize'>Trending</p></Nav.Link> </div>
-        <div className='navImg '> <Nav.Link href="./Rooms"><img src={n1} className='' alt='' /> <p className='fontSize'>Rooms</p> </Nav.Link></div>
-        <div className='navImg '><Nav.Link href="./Omg1"><img src={n3} className=' ' alt='' /><p className='fontSize'>Omg</p></Nav.Link> </div>
-        <div className='navImg '> <Nav.Link href=""><img src={n4} className=' ' alt='' /><p className='fontSize'>Iconic&nbsp;city</p> </Nav.Link></div>
+         <Nav.Link className='navImg ' href="./"><img src={n2} className=' ' alt='' /><p className='fontSize'>Trending</p></Nav.Link>
+         <Nav.Link className='navImg ' href="./Rooms"><img src={n1} className='' alt='' /> <p className='fontSize'>Rooms</p> </Nav.Link>
+        <Nav.Link  className='navImg ' href="./Omg1"><img src={n3} className=' ' alt='' /><p className='fontSize'>Omg</p></Nav.Link> 
+         <Nav.Link className='navImg ' href=""><img src={n4} className=' ' alt='' /><p className='fontSize'>Iconic&nbsp;city</p> </Nav.Link>
         <div className='navImg '> <img src={n5} className=' ' alt='' /><p className='fontSize'>Amazing&nbsp;View</p> </div>
-        <div className='navImg '> <img src={n6} className=' ' alt='' /><p className='fontSize'>CoutrySide</p> </div>
+        <div className='navImg '> <img src={n6} className=' ' alt='' /><p className='fontSize'>Coutry&nbsp;Side</p> </div>
         <div className='navImg '><img src={n7} className=' ' alt='' /><p className='fontSize'>National&nbsp;park</p> </div>
         <div className='navImg '> <img src={n8} className=' ' alt='' /><p className='fontSize'>Camping</p> </div>
         <div className='navImg '> <img src={n9} className=' ' alt='' /><p className='fontSize'>Islands</p> </div>
@@ -84,23 +87,28 @@ export default function NavBar2() {
 
       </OverflowScrolling>
 
-      <button className="scroll-buttons" onClick={() => scrollImages(1)}> <i class="fa-solid fa-arrow-right"></i></button>
+      <button className="scroll-buttons m-3" onClick={() => scrollImages(1)}> <i class="fa-solid fa-arrow-right"></i></button>
   
-      <div className='filter m-5'>
+      <div className='filter m-4'>
 
-        <button className='f1 '>Filters <i class="fa-solid fa-filter fa-xl"></i></button>
+        <button className='f1 m-2'>Filters <i class="fa-solid fa-filter fa-xl"></i></button>
 
-        <button className='f2 '>Display&nbsp;total&nbsp;before&nbsp;taxes&nbsp;<i class="fa-solid fa-toggle-on fa-xl"></i></button>
+
+        <button className='f2 '>Display&nbsp;total&nbsp;before&nbsp;taxes&nbsp;   
+      
+      <label className="switch">
+        <input type="checkbox" checked={isOn} onChange={handleToggle} />
+        <span className="slider round"></span>
+      </label>
+      <p>{isOn ? '' : ''}</p>
+    
+        
+        </button>
       </div>
 
 
     </Container>
 
 
-
-
-
-
-
   )
-}
+};

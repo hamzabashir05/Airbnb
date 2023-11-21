@@ -18,7 +18,7 @@
     background-color: rgb(240, 240, 240);
   
    }
-
+ 
 .fontSize{
   
   font-size: 0.7em;
@@ -52,14 +52,14 @@
  .filter{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
-   width: 35%;
+   width: 40%;
    
 
  }
  .f1{
-padding: 2%;
+padding: 3.3%;
 font-size: 1em;
 font-size: clamp(0.6em 1vw 1.2em);
 margin-right: 1%;
@@ -89,27 +89,23 @@ justify-content: center;
  justify-content: flex-start;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  width:calc(100% - 30%);
-  gap: 5%;
-  overflow: hidden; /* Hide the scrollbar */
+  width:calc(100% - 40%);
+  gap: 50px;
+  overflow-x: scroll;/* Hide the scrollbar */
 
-}
-.overflow-scrolling:hover {
-  overflow-x: hidden; /* Show the scrollbar on hover */
 }
 .navImg {
  
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-  min-width: calc(100% / 7 - 5%);
-  width: calc(100% / 7 - 5%);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+
  
   
   }
   .navImg img{
-  width: 75%;
+  width: 40px;
    
     }
 
@@ -132,7 +128,7 @@ object-fit: contain;
 }
 .destImg img{
 width: 100%;
-height: 25vw;
+height: 45vh;
 margin-bottom: 5%;
 border-radius: 5%;
 object-fit: cover;
@@ -153,4 +149,80 @@ border-radius: 1em;
 color: rgb(138, 138, 138);
 border-color: rgb(0, 0, 0);
 
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #b4b4b4;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #000000;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #000000;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.home-page {
+  position: relative;
+  /* Add any other styling for the home page */
+}
+
+.show-map-button {
+  position: fixed;
+  bottom: 10%;
+  right: 47%;
+  padding: 15px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+.show-map-button:hover {
+  background-color: #2980b9;
 }
