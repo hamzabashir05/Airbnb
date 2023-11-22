@@ -17,7 +17,7 @@ import n13 from '../Assets/n13.jpg';
 import n14 from '../Assets/n14.jpg';
 import n15 from '../Assets/n15.jpg';
 import n16 from '../Assets/n16.jpg';
-
+import FilterModal from './FilterModal';
 
 
 
@@ -58,7 +58,7 @@ export default function NavBar2() {
     
   };
 
-
+  const [modalShow1, setModalShow1] = useState(false);
 
   return (
     <Container  responsive={responsive} className='BarSize mw-100 ' >
@@ -90,10 +90,10 @@ export default function NavBar2() {
       <button className="scroll-buttons m-3" onClick={() => scrollImages(1)}> <i class="fa-solid fa-arrow-right"></i></button>
   
       <div className='filter m-4'>
-
-        <button className='f1 m-2'>Filters <i class="fa-solid fa-filter fa-xl"></i></button>
-
-
+        <>
+        <button className='f1 m-2'  onClick={() => setModalShow1(true)}>Filters <i class="fa-solid fa-filter fa-xl"></i>        </button>
+        <FilterModal show={modalShow1} onHide={() => setModalShow1(false)} />
+        </>
         <button className='f2 '>Display&nbsp;total&nbsp;before&nbsp;taxes&nbsp;   
       
       <label className="switch">

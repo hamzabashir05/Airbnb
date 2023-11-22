@@ -11,6 +11,7 @@ import NavBar2 from './Components/NavBar2';
 import Destinations from './Components/Destinations';
 
 import Omg1 from './Components/Omg1';
+import Modal from './Components/Modal';
 
 
 function App() {
@@ -40,11 +41,11 @@ function App() {
   <Route path='Trending' element={<Destinations/>}/>
   <Route path='Rooms' element={<Rooms/>}/>
   <Route path='Omg1' element={<Omg1/>}/>
+  
     </Routes>
     </BrowserRouter>
   </Col>
 </Row>
-    
     
     
   
