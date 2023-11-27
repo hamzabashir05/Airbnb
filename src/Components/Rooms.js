@@ -119,7 +119,7 @@ export default function Rooms() {
 <div className='destiDisplay'>
         {destinationsData.map((destination) => (
           <div className='destImg' key={destination.id}>
-            <Carousel responsive={responsive}>
+            <Carousel >
               {destination.images.map((image, index) => (
                 <Carousel.Item key={index}>
                   <img src={image} alt='' />

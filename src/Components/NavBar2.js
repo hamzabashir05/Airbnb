@@ -63,7 +63,7 @@ export default function NavBar2() {
   return (
     <Container  responsive={responsive} className='BarSize mw-100 ' >
 
-        <button className="scroll-buttons m-3" onClick={() => scrollImages(-1)}> <i class="fa-solid fa-arrow-left"></i></button>
+        <button className="scroll-buttons m-3 hide-on-small-screen" onClick={() => scrollImages(-1)}> <i class="fa-solid fa-arrow-left"></i></button>
 
         <OverflowScrolling className='overflow-scrolling ' >
 
@@ -87,9 +87,9 @@ export default function NavBar2() {
 
       </OverflowScrolling>
 
-      <button className="scroll-buttons m-3" onClick={() => scrollImages(1)}> <i class="fa-solid fa-arrow-right"></i></button>
+      <button className="scroll-buttons m-3 hide-on-small-screen" onClick={() => scrollImages(1)}> <i class="fa-solid fa-arrow-right"></i></button>
   
-      <div className='filter m-4'>
+      <div className='filter m-4 hide-on-small-screen'>
         <>
         <button className='f1 m-2'  onClick={() => setModalShow1(true)}>Filters <i class="fa-solid fa-filter fa-xl"></i>        </button>
         <FilterModal show={modalShow1} onHide={() => setModalShow1(false)} />

@@ -12,6 +12,7 @@ import Destinations from './Components/Destinations';
 
 import Omg1 from './Components/Omg1';
 import Modal from './Components/Modal';
+import SearchBar from './Components/SearchBar';
 
 
 function App() {
@@ -21,13 +22,9 @@ function App() {
 <Col md={12}>
 <MainText/>
 </Col>
- </Row>
- <Row>
 <Col md={12}>
 <NavBar/>
 </Col>
- </Row>
- <Row>
 <Col md={12}>
 <NavBar2/>
 </Col>

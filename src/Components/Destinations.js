@@ -44,9 +44,8 @@ export default function Destinations() {
 
 
   return (
-
-    <Container responsive={responsive} className='mw-100' >
-      
+    <Container className='mw-100' >
+      <Carousel responsive={responsive} >
 <div className='destiDisplay'> 
 <div className='destImg' > 
   <Carousel>
@@ -78,7 +77,7 @@ export default function Destinations() {
   </div>
 
   <div className='destImg'> 
-  <Carousel>
+  <Carousel >
     <Carousel.Item>
     <img src={d3} alt='' />
     </Carousel.Item>
@@ -157,6 +156,7 @@ export default function Destinations() {
   </div>
   
   </div>
+  </Carousel>
     </Container>
   )
 }

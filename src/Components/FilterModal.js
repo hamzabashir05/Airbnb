@@ -58,7 +58,7 @@ export default function FilterModal(props) {
       <h2>Price Range Chart</h2>
 
       <div>
-        <label htmlFor="minPrice">Min Price: ${minPrice}</label>
+        <label A="minPrice">Min Price: ${minPrice}</label>
         <input
           type="range"
           id="minPrice"
@@ -71,7 +71,7 @@ export default function FilterModal(props) {
       </div>
 
       <div>
-        <label htmlFor="maxPrice">Max Price: ${maxPrice}</label>
+        <label B="maxPrice">Max Price: ${maxPrice}</label>
         <input
           type="range"
           id="maxPrice"
@@ -85,7 +85,7 @@ export default function FilterModal(props) {
 
       <div>
         <h6> ${minPrice} - ${maxPrice}</h6>
-        {/* Display your price range chart or update UI based on the selected range */}
+       
       </div>
     </div>
           
@@ -165,46 +165,46 @@ export default function FilterModal(props) {
             <h4>Amenities</h4>
             <Col md={12}>
             <p>Essentials</p>
-        <label>
+        <div>
         <input
           type="checkbox"
           checked={isChecked}
           onChange={handleCheckboxChange}
         />
         Wifi
-      </label>
-      <label>
+      </div>
+      <div>
         <input
           type="checkbox"
           checked={isChecked}
           onChange={handleCheckboxChange}
         />
         Washer
-      </label>
-      <label>
+      </div>
+      <div>
         <input
           type="checkbox"
           checked={isChecked}
           onChange={handleCheckboxChange}
         />
         Air conditioning
-      </label>
-      <label>
+      </div>
+      <div>
         <input
           type="checkbox"
           checked={isChecked}
           onChange={handleCheckboxChange}
         />
         Kitchen
-      </label>
-      <label>
+      </div>
+      <div>
         <input
           type="checkbox"
           checked={isChecked}
           onChange={handleCheckboxChange}
         />
         Heating
-      </label>
+      </div>
             </Col>
         </Row>
         

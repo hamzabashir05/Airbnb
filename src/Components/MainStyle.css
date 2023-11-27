@@ -2,8 +2,8 @@
 .MainText{
    text-align: center;
    background-color: rgb(224, 224, 224);
-   font-size: 1rem;
-   font-size: clamp(0.6rem 1vw 2rem) ;
+   font-size: 1.5rem;
+   font-size: clamp(0.5rem, 1.5vw, 3rem);
    padding-top: 1%;
    padding-bottom: 1%;
    }
@@ -11,13 +11,16 @@
     width: 30em;
     border: 1px solid #f0f0f0;
     border-radius: 10px;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
     background-color: rgb(240, 240, 240);
-  
+    font-size: 1.2rem;
+    font-size: clamp(0.5rem, 1.2vw, 3rem);
    }
+
+ .fontSizeNav{
+  font-size: 1.2rem;
+  font-size: clamp(0.5rem, 1.2vw, 3rem);
+ }
  
 .fontSize{
   
@@ -225,4 +228,61 @@ input:checked + .slider:before {
 
 .show-map-button:hover {
   background-color: #2980b9;
+}
+
+.searchBar{
+width: 80%;
+margin-top: 2%;
+border: 1px solid #f0f0f0;
+border-radius: 20px;
+align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+.show-on-small-screen {
+  display: none;
+}
+@media (max-width: 999px) {
+  .hide-on-small-screen {
+    display: none;
+  }
+  .overflow-scrolling {
+    display: flex;
+    flex-direction: row;
+   align-items: flex-start;
+   justify-content: flex-start;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    width:90%;
+    gap: 50px;
+    overflow-x: scroll;/* Hide the scrollbar */
+  
+  }
+}
+.nvaBarItemShow{
+  display: none;
+}
+@media (max-width: 999px) {
+.nvaBarItemShow{
+display: block;
+}
+.BarSize{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+  width: 100%;
+  
+}
+
+
 }
